@@ -1,0 +1,36 @@
+.features{
+        &__title{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+        &__text{
+    font-size: 14px;
+    line-height: 1.71;
+    color: $second-text-color;
+    width: 270px;
+}
+        &__list{
+    display: flex;
+}
+        &__item:not(:first-child){
+    margin-left: 30px;
+}
+        &__icon{
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+        &__icon-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F5F4FA;
+    height: 120px;
+    margin-bottom: 30px;
+}
+}

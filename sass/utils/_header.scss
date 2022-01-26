@@ -1,0 +1,104 @@
+.header{
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #ECECEC;
+    &__logo-header{
+        text-decoration: none;
+        font-family: Raleway, cursive;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 1.19;
+        color: $logo-color;
+    }
+    &__accent{
+        color: $accent-color;  
+    }
+    &__navigation,
+    &__contact{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+    &__contact{
+        color: $second-text-color;
+        &:hover,
+        &:focus{
+        color: $accent-color;
+        }
+    }
+    &__navigation{
+        color: $primary-text-color;
+        &:hover,
+        &:focus{
+            color: $accent-color;
+        }
+    }
+    &__current{
+        position: relative;
+        color: $accent-color;
+    }
+    &__current::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        position: absolute;
+        background-color: $accent-color;
+        left: 0;
+        bottom: -1px;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-list{ 
+        display: flex;
+        align-items: center;
+        margin-left: 93px;
+    }
+    &__cont{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    &__nav .logo-header{
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 25px;  
+    }
+    .head-link{
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        transition: $transition;
+    }
+    .head-cont{
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        transition: $transition;
+    }
+    &__nav-item,
+    &__cont-item{
+        margin-right: 50px;
+    }
+    .icon-mail{
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        fill: currentColor;
+    }
+    .icon-tel{
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}
