@@ -122,23 +122,6 @@
     padding-top: 32px;
     font-size: 14px;
     line-height: 1.14;
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 0 2px;
-        background-color: $accent-color;
-        transform: scale(0);
-        transition: $transition;
-    }
-    &:hover::after,
-    &:focus::after {
-        transform: scale(1);
-    }
     }
 }
 .nav-box-link__active {
