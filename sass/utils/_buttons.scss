@@ -1,34 +1,49 @@
-.button{
-    display: inline-block;
-    border-radius: 4px;
-    border-color: transparent;
-    padding: 6px 22px;
-    height: 38px;
-    background-color: $button-bg-color;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 500;
+.portfolio__buttons{
     font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    transition: $transition;
-    &:hover,
-    &:focus{
-    color: $white-color;
-    background-color: $accent-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    &.links {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
+    }
+    @media screen and (min-width: 768px) {
+    justify-content: center;
+    }
 }
+.portfolio__btn{
+    @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+    }
 }
-.portfolio{
-    &__btn{
+.portfolio__btn:not(:last-child) {
     margin-right: 8px;
 }
-    &__buttons{
-    // display: flex;
-    // flex-wrap: nowrap;
-    // justify-content: center;
-}
-    &__btn-container{
-    margin-bottom: 50px;
-}
+.portfolio__button{
+    min-width: 73px;
+    padding: 6px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    border: transparent;
+    color: $primary-text-color;
+    background-color: $button-bg-color;
+    transition: $transition;
+    &:hover,
+    &:focus {
+    cursor: pointer;
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
