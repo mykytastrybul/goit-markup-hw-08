@@ -18,11 +18,11 @@
     @media screen and (min-width: 768px) {
     border: 1px solid #ececec;
     }
-}
-.container__header {
+    &__container{
     @media screen and (min-width: 768px) {
     display: flex;
     }
+}
 }
 .site-nav {
     @media screen and (max-width: 767px) {
@@ -218,7 +218,7 @@
 .contacts__link {
     font-size: 24px;
     line-height: 1.17;
-    fill: $primary-text-color;
+    fill: $second-text-color;
     text-decoration: none;
     color: $second-text-color;
     transition: $transition;
@@ -231,7 +231,7 @@
     justify-content: center;
     font-size: 12px;
     line-height: 1.17;
-    color: $primary-text-color;
+    color: $second-text-color;
     font-size: 14px;
     line-height: 1.14;
     }
@@ -242,6 +242,7 @@
     display: block;
     fill: currentColor;
     margin-right: 10px;
+    transition: $transition;
     .contacts__link:hover &,
     .contacts__link:focus & {
         fill: $accent-color;
@@ -258,17 +259,17 @@
     @media screen and (max-width: 767px) {
     display: flex;
     }
-}
-.social-link__item {
+    &__item {
     padding-left: 10px;
     &:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;
     }
 }
-.social-link__link {
+    &__link {
     text-decoration: none;
     font-size: 18px;
     line-height: 1.22;
     color: $accent-color;
+}
 }

@@ -1,34 +1,61 @@
 .features{
-    &__title{
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 1.14;
-        text-transform: uppercase;
-        margin-bottom: 10px;
+        &__list{
+    @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
     }
-    &__text{
-        font-size: 14px;
-        line-height: 1.71;
-        color: $second-text-color;
-        text-align: left;
+    @media screen and (min-width: 1200px) {
+    margin: -15px;
+    }
+}
+        &__item{
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
         margin-bottom: 30px;
     }
-    &__item{
-        text-align: center;
     }
-    &__icon{
-        display: flex;
-        align-items: center;
-        width: 70px;
-        height: 70px;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
     }
-    &__icon-bg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        background-color: #F5F4FA;
-        height: 120px;
-        margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 8 * 15px) / 4);
+        margin: 15px;
     }
+}
+        &__icon-bg{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $button-bg-color;
+    border-radius: 4px;
+    fill: $primary-text-color;
+}
+        &__icon{
+    display: flex;
+    width: 70px;
+}
+
+        &__title{
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    }
+}
+        &__text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
 }
