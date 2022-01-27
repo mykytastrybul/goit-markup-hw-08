@@ -1,0 +1,47 @@
+.agreement{
+    display: flex;
+    &__label{
+        position: relative;
+        left: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+    &__link{
+        color: $accent-color;
+        text-decoration: underline;
+    }
+    &__icon{
+        width: 16px;
+        height: 15px;
+        border: 1px solid #000;
+        border-radius: 2px;
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition;
+    }
+    &__checkbox{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+        margin-top: 5px;
+        &:checked  +  .agreement__icon{
+            border: none;
+            background-color: $accent-color;
+            background-image: url(./images/symbol-defs.svg#icon-check);
+            background-size: contain;
+        }
+    }
+    &__span{
+        margin-left: 9px;
+        margin-right: 5px;
+    }
+}
