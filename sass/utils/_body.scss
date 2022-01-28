@@ -12,7 +12,7 @@ ul {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    @media screen and (max-width: 480px) {
+    @media screen and (min-width: 480px) {
         width: 480px;
     }
     
@@ -25,8 +25,14 @@ ul {
     }
 }
 .section{
+    @media screen and (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px){
     padding-top: 94px;
     padding-bottom: 94px;
+    }
 }
 .visually-hidden{
     position: absolute;
@@ -47,4 +53,9 @@ ul {
 }
 .list{
     list-style: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

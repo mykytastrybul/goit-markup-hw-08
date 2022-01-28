@@ -20,7 +20,7 @@ ul {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
@@ -38,9 +38,18 @@ ul {
   }
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -65,6 +74,12 @@ ul {
 
 .list {
   list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .header__logo-header {
@@ -141,12 +156,13 @@ ul {
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 4;
+    z-index: 5;
   }
   .site-nav__button .site-nav__icon-cross {
     display: none;
   }
   .site-nav__button.is-open .site-nav__icon-cross {
+    position: fixed;
     display: block;
   }
   .site-nav__button.is-open .site-nav__icon-menu {
@@ -163,7 +179,7 @@ ul {
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -178,6 +194,7 @@ ul {
   }
   .menu.is-open {
     display: block;
+    height: 796px;
   }
 }
 
@@ -513,6 +530,10 @@ ul {
   .footer .footer-box {
     text-align: center;
   }
+}
+
+.footer .footer-box__list {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -924,7 +945,7 @@ ul {
 }
 
 .main__section {
-  padding: 200px 0;
+  padding: 118px 0;
   background-color: #2F303A;
   text-align: center;
   margin-left: auto;
@@ -934,6 +955,12 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__section {
+    padding: 200px 0;
+  }
 }
 
 @media screen and (min-width: 320px) {
@@ -1006,7 +1033,6 @@ ul {
 .about__item {
   position: relative;
   margin-left: 30px;
-  margin-top: 30px;
   -ms-flex-preferred-size: calc(100% / 3 - 30px);
       flex-basis: calc(100% / 3 - 30px);
 }
@@ -1163,10 +1189,9 @@ ul {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin: -15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1174,18 +1199,27 @@ ul {
   background-color: #fff;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .team__item:first-child, .team__item:nth-child(4n+2) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__item:nth-child(2n+1) {
+    margin-right: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .team__item {
     width: calc((100% - 4 * 15px) / 2);
-  }
-  .team__item + .team__item {
-    margin-left: 30px;
   }
 }
 
@@ -1253,12 +1287,19 @@ ul {
   height: 20px;
 }
 
-.clients__section {
+.section__title {
+  text-align: center;
   margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
 @media screen and (min-width: 1200px) {
-  .clients__section {
+  .section__title {
     margin-bottom: 50px;
   }
 }
@@ -1379,7 +1420,12 @@ ul {
 @media (min-width: 768px) and (max-width: 1199px) {
   .portfolio__image {
     width: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
+  }
+  .portfolio__image:nth-child(2n+1) {
+    margin-left: 15px;
+  }
+  .portfolio__image:nth-child(2n) {
+    margin-left: 30px;
   }
 }
 
@@ -1698,6 +1744,7 @@ ul {
     left: 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    font-size: 12px;
     line-height: calc(14/12);
   }
 }
@@ -1799,6 +1846,8 @@ ul {
   padding: 6px 22px;
   border-radius: 4px;
   font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26/16);
   text-decoration: none;
   border: transparent;
   color: #212121;

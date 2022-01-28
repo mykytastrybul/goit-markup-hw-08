@@ -44,11 +44,12 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 4;
+    z-index: 5;
     & .site-nav__icon-cross {
         display: none;
     }
     &.is-open .site-nav__icon-cross {
+        position: fixed;
         display: block;
     }
     &.is-open .site-nav__icon-menu {
@@ -62,7 +63,7 @@
     z-index: 1;
     @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -75,6 +76,7 @@
     line-height: 1.18;
     &.is-open {
         display: block;
+        height: 796px;
     }
     }
     @media screen and (min-width: 768px) {
