@@ -168,6 +168,12 @@ img {
   .site-nav__button.is-open .site-nav__icon-menu {
     display: none;
   }
+  .site-nav__button:hover .site-nav__icon-menu,
+  .site-nav__button:focus .site-nav__icon-menu,
+  .site-nav__button:hover .site-nav__icon-cross,
+  .site-nav__button:focus .site-nav__icon-cross {
+    fill: #2196F3;
+  }
 }
 
 .menu {
@@ -194,7 +200,6 @@ img {
   }
   .menu.is-open {
     display: block;
-    height: 796px;
   }
 }
 
@@ -299,12 +304,23 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .contacts-social {
+    position: absolute;
+    bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1161,14 +1177,16 @@ img {
 
 .team__title {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: calc(33/28);
   text-align: center;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1200px) {
   .team__title {
+    font-size: 36px;
+    line-height: 1.16;
     margin-bottom: 50px;
   }
 }
@@ -1304,8 +1322,8 @@ img {
   text-align: center;
   margin-bottom: 30px;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: calc(33/28);
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -1313,6 +1331,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .section__title {
+    font-size: 36px;
+    line-height: 1.16;
     margin-bottom: 50px;
   }
 }
@@ -1532,7 +1552,7 @@ img {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .portfolio__images {
-    margin-top: 30px;
+    margin-top: 46px;
   }
 }
 
@@ -1752,7 +1772,7 @@ img {
   color: #757575;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .agreement__label {
     left: 0;
     -ms-flex-wrap: wrap;

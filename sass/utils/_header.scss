@@ -55,6 +55,12 @@
     &.is-open .site-nav__icon-menu {
         display: none;
     }
+    &:hover .site-nav__icon-menu,
+    &:focus .site-nav__icon-menu,
+    &:hover .site-nav__icon-cross,
+    &:focus .site-nav__icon-cross{
+        fill: $accent-color;
+    }
     }
 }
 .menu {
@@ -76,7 +82,6 @@
     line-height: 1.18;
     &.is-open {
         display: block;
-        height: 796px;
     }
     }
     @media screen and (min-width: 768px) {
@@ -147,11 +152,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        bottom: 48px;
+        }
 }
 .contacts {
     @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     }
     @media screen and (min-width: 768px) {
     display: flex;

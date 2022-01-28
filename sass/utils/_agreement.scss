@@ -4,7 +4,7 @@
         position: relative;
         left: 16px;
         display: flex;
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 1199px){
             left: 0;
             flex-wrap: wrap;
             font-size: 12px;
