@@ -1217,6 +1217,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .team__item:nth-child(10n+3) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__item {
     width: calc((100% - 4 * 15px) / 2);
